@@ -1,0 +1,16 @@
+# Create
+kubectl create -f example6.yaml
+
+# Check NodePort
+kubectl get svc
+
+# Check the EndPoints
+kubectl describe svc my-service    
+
+#Get Worker Node IP
+kubectl get nodes
+
+
+# Connect using Nodeport  using the IP address of the nodes not the pods as NodePort is from Host
+
+curl http://nodeip:31000
