@@ -1,0 +1,23 @@
+Create :
+kubectl create -f example3.yaml
+kubectl get po 
+kubectl get po -o wide 
+
+Filter using Label :
+kubectl get po -l tier=frontend
+kubectl describe rs tomcat-rs 
+
+Scale Up :
+kubectl scale rs tomcat-rs --replicas=9
+kubectl get po -l tier=frontend
+
+Scale Down :
+kubectl scale rs tomcat-rs --replicas=3
+kubectl get po -l tier=frontend
+kubectl delete rc tomcat-rc 
+kubectl get po -l tier=frontend
+
+Delete :
+kubectl delete rs tomcat-rs 
+kubectl get po -l tier=frontend	   
+
