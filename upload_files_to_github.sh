@@ -2,7 +2,7 @@
 
 # Variables
 REPO_DIR="C:/Users/GT082376/Important/Studies/DevOps/DK/kubernetes-for-containers" # Change this to your local repository path
-COMMIT_MESSAGE="Load Balancer" # Customize your commit message
+COMMIT_MESSAGE="Cache Volume" # Customize your commit message
 BRANCH_NAME="main" # Change to the branch you want to push to
 
 # Navigate to the repository directory

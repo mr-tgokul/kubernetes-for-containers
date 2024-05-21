@@ -1,0 +1,21 @@
+# Create
+
+kubectl create -f example8.yaml 
+
+
+kubectl get po -o wide 
+
+# Connect to the Container
+ kubectl exec -it tomcat-pod -- /bin/sh
+
+cd custom-volume/
+
+Put some files inside the volume
+
+# Delete and Recreate the container using the same file and connect to the container and check the files
+
+kubectl delete pod tomcat-pod 
+kubectl create -f example8.yaml
+
+kubectl exec -it tomcat-pod -- /bin/sh
+
