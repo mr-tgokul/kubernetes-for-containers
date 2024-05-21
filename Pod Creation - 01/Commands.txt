@@ -1,0 +1,41 @@
+Create pods :
+
+kubectl create -f pod_creation.yaml
+
+Display Pods :
+kubectl get pods 
+
+
+Pod Network Information:
+
+kubectl get pods -o wide
+
+
+Master and Worker Node information:
+
+kubectl get nodes
+
+
+Full Information about Pods :
+
+kubectl describe pod tomcat-pod
+
+
+Login into Pod :
+
+kubectl exec -it tomcat-pod -- /bin/sh
+
+
+Delete Pod :
+
+kubectl delete pod tomcat-pod
+
+
+Delete using File :
+
+kubectl delete -f example1.yaml
+
+
+
+
+

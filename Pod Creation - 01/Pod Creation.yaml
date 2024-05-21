@@ -1,0 +1,15 @@
+# Pod Creation
+apiVersion : v1
+kind : Pod
+metadata :
+  name : tomcat-pod
+  labels :
+   app : tomcat-pod
+   tier : dev
+
+spec:
+  containers :
+   - name : tomcat-container
+     image : vishymails/tomcatimage:1.0
+
+
