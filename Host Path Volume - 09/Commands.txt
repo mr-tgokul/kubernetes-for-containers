@@ -1,0 +1,16 @@
+kubectl create -f example9.yaml
+kubectl get po 
+
+# Connect to the container and browse to the created folder and create some files
+kubectl exec -it tomcat-hostpath -- /bin/sh
+
+# Delete 
+kubectl delete -f example9.yaml
+
+# Recreate 
+kubectl create -f example9.yaml
+
+# Connect to the container and browse to the created folder and check whether created file exists
+
+kubectl exec -it tomcat-hostpath -- /bin/sh
+
