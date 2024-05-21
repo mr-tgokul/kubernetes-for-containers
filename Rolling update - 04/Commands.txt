@@ -16,3 +16,39 @@ kubectl rollout status deployment/tomcat-deploy
 Deploy Staus :
 kubectl get deploy 
 kubectl get deploy -o wide 
+
+
+Rollback :
+
+
+Use the below command which will Fail due to wrong image name
+
+kubectl set image deploy tomcat-deploy tomcat-containers=redis900 --record 
+
+Check Status
+kubectl rollout status deployment/tomcat-deploy
+
+
+ kubectl rollout history deployment/tomcat-deploy 
+ kubectl get deploy -o wide 
+
+Undo :
+ kubectl rollout undo deployment/tomcat-deploy         
+ kubectl get deploy -o wide
+
+
+
+Deployments Supports Scale Up and Down:
+
+kubectl scale deployment tomcat-deploy --replicas=8
+kubectl get po -o wide 
+kubectl scale deployment tomcat-deploy --replicas=4
+kubectl get po -o wide 
+
+
+
+Delete :
+
+kubectl delete deploy tomcat-deploy 
+kubectl delete -f example4.yaml
+
