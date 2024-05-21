@@ -1,0 +1,20 @@
+kubectl create -f example5.yaml
+
+kubectl describe deploy tomcat-deploy
+
+Create Deployemet :
+kubectl create deployment web-003 --image=nginx --replicas=4 --dry-run=client
+kubectl get pods 
+kubectl create deployment web-003 --image=nginx --replicas=4 --dry-run=client -o yaml 
+
+Export the YAML file 
+create deployment web-003 --image=nginx --replicas=4 --dry-run=client -o yaml | tee demo.yaml
+
+kubectl create -f demo.yaml
+kubectl get deploy -o wide 
+kubectl get po -o wide 
+
+kubectl run admin-pod --image=busybox --command sleep 3200 -o yaml | tee pod1.yaml
+
+
+* Need to Rollout so the Old Pods gets deleted  
