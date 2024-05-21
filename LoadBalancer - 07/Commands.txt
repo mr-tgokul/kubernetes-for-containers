@@ -1,0 +1,16 @@
+# Create
+
+kubectl create -f example7.yaml
+
+
+# List Service
+
+kubectl get svc      # Get the LB internal IP 
+
+
+# Check Type
+
+kubectl describe svs my-service   
+
+
+curl http://loadbalancerinternalip:8080

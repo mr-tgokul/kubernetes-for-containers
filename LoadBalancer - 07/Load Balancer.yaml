@@ -1,0 +1,44 @@
+# Deploy App
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tomcat-deploy
+  labels:
+    app: tomcat-app
+
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: tomcat-app
+  template:
+    metadata:
+      labels:
+        app: tomcat-app
+
+    spec:
+      containers:
+        - name: tomcat-containers
+          image: vishymails/tomcatimage:1.0
+          ports:
+            - containerPort: 8080
+
+---
+# Load Balancer
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-service
+  labels:
+    app: tomcat-app
+
+spec:
+  selector:
+    app: tomcat-app
+  type: LoadBalancer
+  ports:
+    - nodePort: 31000
+      port: 8080
+      targetPort: 8080
