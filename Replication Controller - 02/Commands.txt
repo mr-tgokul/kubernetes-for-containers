@@ -1,0 +1,28 @@
+Create :
+
+kubectl create -f example2.yaml
+
+
+Filter Pods using Label :
+
+kubectl get pods -l app=tomcat-app
+
+
+Descrive RC :
+
+kubectl describe rc tomcat-rc 
+
+
+Scale Up :
+kubectl scale rc tomcat-rc --replicas=9
+
+List Pods :
+
+kubectl get pods
+
+
+Scale Down :
+kubectl scale rc tomcat-rc --replicas=4
+
+Delete :
+kubectl delete -f example2.yaml
