@@ -1,0 +1,18 @@
+kubectl create -f example4.yaml 
+kubectl get po -o wide 
+kubectl describe deploy tomcat-deploy 
+kubectl get rs 
+kubectl get po 
+
+Rollout :
+kubectl set image deploy tomcat-deploy tomcat-containers=nginx:1.9.1 --record 
+
+Check Deploy File : 
+kubectl edit deploy tomcat-deploy 
+
+Rollout Status :
+kubectl rollout status deployment/tomcat-deploy
+
+Deploy Staus :
+kubectl get deploy 
+kubectl get deploy -o wide 
