@@ -1,0 +1,22 @@
+# After Exampl
+
+
+kubectl create -f 2.yaml
+
+
+kubectl get pods
+
+
+kubectl exec -it config-env-pod -- /bin/sh
+
+
+
+echo $config_db_host_name
+
+
+echo $config_properties_file_name
+
+
+echo $config_service_details
+
+echo $onfig-css-properties

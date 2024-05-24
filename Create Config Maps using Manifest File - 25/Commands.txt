@@ -1,0 +1,26 @@
+# Create Conifg maps using Command Based Approch
+
+Application1.properties
+cat > application1.properties
+
+management.endpoints.enabled-by-default=true 
+management.endpoint.info.enabled=true 
+management.security.enabled=false 
+management.endpoints.web.exposure.include=*
+
+
+Application2.properties
+cat > application2.properties
+
+server.port= 9000
+server.servlet.context-path=/oracle 
+oracleprops.greeting= Thank you and visit again - altered 
+oracleprops.greeting1= New Data
+
+
+
+# Create key Valume Pairs 
+
+kubectl create configmap my-config-map1 --from-literal=key1=value1 --from-literal=key2=value2
+kubectl create configmap my-config-map2 --from-file=./application1.properties --from-file=./application2.properties
+kubectl get c

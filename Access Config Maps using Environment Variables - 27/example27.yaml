@@ -1,0 +1,35 @@
+# Access Configmaps usig Environment variables
+apiVersion : v1
+kind : Pod
+metadata :
+  name : config-env-pod
+
+spec :
+  containers :
+    - name : mycontainer
+      image : redis
+      env :
+        - name : config_db_host_name
+          valueFrom : 
+             configMapKeyRef :
+               name : myconfig
+               key : db_host_name 
+        
+        - name : config_properties_file_name
+          valueFrom : 
+             configMapKeyRef :
+               name : myconfig
+               key : properties_file_name
+
+        - name : config_service_details
+          valueFrom :
+            configMapKeyRef :
+              name : myconfig    
+              key : service_details
+        
+        - name : config-css-properties
+          valueFrom : 
+             configMapKeyRef :
+               name : myconfig
+               key : css-properties 
+  restartPolicy : Never

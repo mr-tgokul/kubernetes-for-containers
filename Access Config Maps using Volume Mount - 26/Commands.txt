@@ -1,0 +1,12 @@
+kubectl create -f example26.yaml
+
+
+kubectl get pods
+
+
+kubectl exec -t myconfigpod -- /bin/sh
+
+
+cd /etc/config
+
+cat css-properties

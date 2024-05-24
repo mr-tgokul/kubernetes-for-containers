@@ -1,0 +1,21 @@
+# Access config using Volume mount method
+apiVersion : v1
+kind : Pod 
+metadata : 
+  name : myconfigpod
+  labels :
+    name : myconfigpod
+spec :
+  containers :
+    - name : myconfigpod
+      image : redis
+      volumeMounts : 
+        - name : config-vol
+          mountPath : "/etc/config"
+          readOnly : true
+  
+  volumes :
+    - name : config-vol
+      configMap :
+       name : myconfig 
+

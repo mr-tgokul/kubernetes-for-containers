@@ -1,0 +1,17 @@
+# Create config map using manifest file
+apiVersion : v1
+kind : ConfigMap
+metadata : 
+  name : myconfig
+data :
+  db_host_name : "oraclehost"
+  properties_file_name : "application.properties"
+
+  service_details : |
+    components=admissions-service, pathology-service
+    rating=5
+  
+  css-properties : |
+    color = red 
+    background : yellow
+    text-color = black
