@@ -1,0 +1,10 @@
+kubectl get po --namespace=my-ns1
+
+
+# Create Pod under new name space using command line
+kubectl run nginx --image=nginx --namespace=my-ns1
+
+
+
+# Change Default Namespace 
+kubectl config set-context --current --namespace=my-ns1
