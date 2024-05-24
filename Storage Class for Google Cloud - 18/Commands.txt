@@ -1,0 +1,6 @@
+# Create 
+
+kubectl create -f example18.yaml
+
+# List Storage Class
+kubectl get storage class
