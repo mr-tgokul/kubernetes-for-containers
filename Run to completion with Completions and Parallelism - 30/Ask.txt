@@ -1,0 +1,2 @@
+
+As you can see whenever you started the Job 2 pods were created at that time and one pod finished its job the another one got created so total 3 and 2 at a time

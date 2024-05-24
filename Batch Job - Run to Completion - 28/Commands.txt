@@ -1,0 +1,6 @@
+kubectl create -f example28.yaml
+
+
+kubectl get pods -o wide
+
+kubectl logs <containername>

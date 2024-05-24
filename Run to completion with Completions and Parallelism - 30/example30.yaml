@@ -1,0 +1,20 @@
+# Run to Completion with Completion and Parallelism - Batch Job 
+apiVersion : batch/v1
+kind : Job
+metadata :
+  name : sleep20
+spec :
+  completions : 3    # Create 3 Pods in Total 
+  parallelism : 2    # Create 2 Pods at at Time
+  template :
+    metadata :
+      name : sleep20
+    spec :
+      containers :
+        - name : sleep20
+          image : centos:7
+          command : ["python",
+                     "-c",
+                     "import time; print('Started......');
+                     time.sleep(20); print('done');" ]           
+      restartPolicy : Never
