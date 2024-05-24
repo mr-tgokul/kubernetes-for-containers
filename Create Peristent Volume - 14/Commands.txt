@@ -1,0 +1,5 @@
+# Crate Persistent Volume
+kubectl create -f example14.yaml 
+
+# List Persistent Volumes
+kubectl get pv 

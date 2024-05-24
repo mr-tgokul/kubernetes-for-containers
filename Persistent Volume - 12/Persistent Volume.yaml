@@ -1,0 +1,17 @@
+# Create persistent volume 
+
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: kube-pv1
+spec:
+  capacity:
+    storage: 1Gi
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteMany
+  persistentVolumeReclaimPolicy: Recycle
+  nfs:
+    path: /var/nfs/general
+    server: 192.186.86.128
+    readOnly: false

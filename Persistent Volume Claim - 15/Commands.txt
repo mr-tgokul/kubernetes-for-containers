@@ -1,0 +1,8 @@
+# Create 
+kubectl create -f example15.yaml 
+
+# List Claimed Volumes
+kubectl get pvc
+
+# List Persistent Volume
+kubectl get pv 
