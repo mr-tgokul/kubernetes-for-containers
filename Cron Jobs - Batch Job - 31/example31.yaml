@@ -1,0 +1,24 @@
+# Cron Job - Executes Every minute
+apiVersion : batch/v1
+kind : CronJob
+metadata :
+  name : cron-demo
+spec :
+  schedule : "*/1 * * * *"
+  jobTemplate :
+    spec :
+      template :
+        metadata :
+          labels :
+            name : cron-demo
+
+        spec :
+          containers :
+             - name : cron-demo
+               image : centos:7
+               args :
+                 - python 
+                 - -c 
+                 - from datetime import datetime; print('[{}] Cron demo for Containers and Kubernetes Batch Oracle .....'.format(datetime.now()))
+          restartPolicy : Never
+            
