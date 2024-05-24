@@ -1,0 +1,4 @@
+--- = use this symbol to write multiple manifest in one file
+
+
+# Both PV and PVC will be created at the same time
