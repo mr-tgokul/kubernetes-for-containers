@@ -1,0 +1,14 @@
+cat > example34.yaml
+kubectl create -f example34.yaml
+kubectl get po -o wide 
+kubectl describe pod init-container-pod
+kubectl describe pod init-container-demo
+
+# logs of init containers
+kubectl logs init-container-demo -c init-container-ubuntu
+kubectl logs init-container-demo -c init-container-busybox
+kubectl logs init-container-demo -c init-container-nginx
+
+
+
+Init containers will start first before the main pod starts 
