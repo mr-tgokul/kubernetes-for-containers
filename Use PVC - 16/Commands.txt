@@ -1,0 +1,27 @@
+kubectl create -f example17.yaml
+
+kubectl get pods -o wide
+
+kubectl exec -it pv-pod -- /bin/bash
+
+
+# Create Data on the Pod under test-pd folder
+
+
+
+# Login into the Kubernetes worker node 
+
+kubectl get nodes
+
+
+Connect to the Worker node
+ssh node01   
+
+
+open cd /mnt/datas
+
+# As you can see we are able to see the data which we created in pod under worker node
+
+/mnt/datas = This has been defined during the pvc creation 
+
+Data will be there even if the pod is deleted. 
