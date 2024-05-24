@@ -1,0 +1,20 @@
+#List Daemon Set
+kubectl get ds
+
+
+# Create
+kubectl create -f example20.yaml
+
+
+# List Nodes
+kubectl get nodes
+
+# Get Pods
+kubectl get pods
+
+
+
+# 1 Pod will be running on Each worker node
+
+
+Lab : https://labs.play-with-k8s.com/ 
