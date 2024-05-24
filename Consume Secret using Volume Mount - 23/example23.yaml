@@ -1,0 +1,21 @@
+# Consume Secret using Volume mount method 
+apiVersion : v1
+kind : Pod 
+metadata : 
+  name : mysecretpod
+  labels :
+    name : mysecretpod
+spec :
+  containers :
+    - name : mysecretpod
+      image : redis
+      volumeMounts : 
+        - name : sec-vol
+          mountPath : "/etc/secret"
+          readOnly : true
+  
+  volumes :
+    - name : sec-vol
+      secret :
+       secretName : mysecret 
+

@@ -1,0 +1,11 @@
+# Create Secret using Manifest File
+apiVersion : v1
+kind : Secret
+metadata :
+  name : mysecret
+type : Opaque
+data :
+  username : YWRtaW4=       # This is the encrypted password which can be achived using echo -n 'admin' | base64 > username.txt
+  password : cGFzc3dvcmRAMTIz  # echo -n 'password@123' | base64 > password.txt   
+
+  # Write the output of those 2 command s in the above fields

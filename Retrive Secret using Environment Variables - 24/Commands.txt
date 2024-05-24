@@ -1,0 +1,11 @@
+kubectl create -f secret.yaml
+
+
+kubectl exec -it secret-env-pod -- /bin/bash
+
+
+echo $SECRET_USERNAME
+
+
+
+echo $SECRET_PASSWORD

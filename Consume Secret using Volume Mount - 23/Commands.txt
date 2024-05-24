@@ -1,0 +1,12 @@
+kubectl create -f example24.yaml
+
+kubectl get pods
+
+kubectl exec -it mysecretpod -- /bin/sh
+
+cd /etc/secret
+
+
+cat username
+
+cat password
