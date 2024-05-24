@@ -1,0 +1,3 @@
+* Two containers called producer and consumer where the data will created by producer and put in the shared volume which will be consumed by consumer pod 
+
+* There is no relationship between producer and consumer pods as they both are individual containers.
